@@ -1,40 +1,76 @@
-/* html, body {
+html, body {
     height: 100%;
 }
 
 body {
-    background-color: beige;
     margin: 0;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.gamecard {
+    height: 400px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 10px 10px 5px gray;
+    padding: 20px;
+    border-radius: 15px;
+    border: 3px solid burlywood;
+}
+
+.heading {
+    font-family: Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+p {
+    font-size: 17px;
 
 }
 
-.title {
-    font-size: 100px;
-    margin-bottom: 200px;
-    font-family: "georgia", serif;
-    border-bottom: 15px solid black;
+.theResults {
+    font-family: Verdana, sans-serif;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
 }
 
 .buttons {
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    gap: 25px;
+
 }
 
 button {
-    background-color: green;
+    background-color: mediumseagreen;
     color: white;
-    padding: 15px 100px;
-    font-size: 60px;
+    font-size: 40px;
     font-family: papyrus, fantasy;
-    border: 15px solid black;
-    border-radius: 30px;
+    padding: 25px;
+    border: 7px solid black;
+    border-radius: 15px;
     cursor: pointer;
-    box-shadow: 10px 10px 5px #aaaaaa;
 }
+
+button:hover {
+    background-color: firebrick;
+}
+
+/*
+
 
 button:hover {
     background-color: red;
