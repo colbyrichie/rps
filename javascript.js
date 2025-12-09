@@ -16,11 +16,6 @@ function getComputerChoice() {
     };
 };
 
-function getHumanChoice() {
-    const userInput = prompt("Type rock, paper, or scissors");
-    return userInput.toLowerCase();
-};
-
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
         console.log("Its a tie!");
@@ -48,20 +43,18 @@ function playRound(humanChoice, computerChoice) {
     console.log(" ");
 };
 
-function playGame() {
-    playRound(getHumanChoice(), getComputerChoice());
-    playRound(getHumanChoice(), getComputerChoice());
-    playRound(getHumanChoice(), getComputerChoice());
-    playRound(getHumanChoice(), getComputerChoice());
-    playRound(getHumanChoice(), getComputerChoice());
 
-    if (humanScore === computerScore) {
-        console.log("You Tied!");
-    } else if (humanScore > computerScore) {
-        console.log("You Won!");
-    } else {
-        console.log("You Lost!");
-    };
-};
+// playGame();
 
-playGame();
+
+// button click => HumanChoice => Play Round
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        let btntext = button.textContent;
+        btntext = btntext.toLowerCase();
+        playRound(btntext, getComputerChoice());
+    });
+});
